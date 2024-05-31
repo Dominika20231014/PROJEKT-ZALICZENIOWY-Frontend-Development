@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sklep samochodowy</title>
+  <link rel="stylesheet" href="./Sklep samochodowy_files/styles.css">
+</head>
+<body>
+  <header id="header" style="display: none;">
+    <h1>Sklep samochodowy</h1>
+    <label for="brandSelect">Wybierz markę:</label>
+    <select id="brandSelect" multiple="">
+      <option value="all">Wszystkie</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Honda">Honda</option>
+      <option value="Ford">Ford</option>
+      <option value="Tesla">Tesla</option>
+      <option value="BMW">BMW</option>
+      <option value="Audi">Audi</option>
+      <option value="Mercedes-Benz">Mercedes-Benz</option>
+      <option value="Volkswagen">Volkswagen</option>
+      <option value="Subaru">Subaru</option>
+      <option value="Mazda">Mazda</option>
+      <option value="Hyundai">Hyundai</option>
+      <option value="Chevrolet">Chevrolet</option>
+      <option value="Lexus">Lexus</option>
+    </select>
+    <button id="filterButton">Filtruj</button>
+  </header>
+
+  <div id="car-list" style="display: none;"><div class="car"><img src="./Sklep samochodowy_files/toyota_corolla.jpg"><div class="car-details">
+      <p>Marka: Toyota</p>
+      <p>Model: Corolla</p>
+      <p>Rok: 2018</p>
+      <p>Cena: $25000</p>
+      <p>Przebieg: 40000 km</p>
+      <p>Moc: 132 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/honda_civic.jpg"><div class="car-details">
+      <p>Marka: Honda</p>
+      <p>Model: Civic</p>
+      <p>Rok: 2020</p>
+      <p>Cena: $28000</p>
+      <p>Przebieg: 20000 km</p>
+      <p>Moc: 158 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/ford_focus.jpg"><div class="car-details">
+      <p>Marka: Ford</p>
+      <p>Model: Focus</p>
+      <p>Rok: 2019</p>
+      <p>Cena: $22000</p>
+      <p>Przebieg: 35000 km</p>
+      <p>Moc: 123 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/tesla_model_s.jpg"><div class="car-details">
+      <p>Marka: Tesla</p>
+      <p>Model: Model S</p>
+      <p>Rok: 2021</p>
+      <p>Cena: $70000</p>
+      <p>Przebieg: 5000 km</p>
+      <p>Moc: 670 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/bmw_3_series.jpg"><div class="car-details">
+      <p>Marka: BMW</p>
+      <p>Model: 3 Series</p>
+      <p>Rok: 2017</p>
+      <p>Cena: $30000</p>
+      <p>Przebieg: 25000 km</p>
+      <p>Moc: 248 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/audi_a4.jpg"><div class="car-details">
+      <p>Marka: Audi</p>
+      <p>Model: A4</p>
+      <p>Rok: 2019</p>
+      <p>Cena: $35000</p>
+      <p>Przebieg: 18000 km</p>
+      <p>Moc: 248 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/mercedes_c_class.jpg"><div class="car-details">
+      <p>Marka: Mercedes-Benz</p>
+      <p>Model: C-Class</p>
+      <p>Rok: 2020</p>
+      <p>Cena: $40000</p>
+      <p>Przebieg: 15000 km</p>
+      <p>Moc: 255 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/vw_golf.jpg"><div class="car-details">
+      <p>Marka: Volkswagen</p>
+      <p>Model: Golf</p>
+      <p>Rok: 2018</p>
+      <p>Cena: $18000</p>
+      <p>Przebieg: 30000 km</p>
+      <p>Moc: 147 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/subaru_impreza.jpg"><div class="car-details">
+      <p>Marka: Subaru</p>
+      <p>Model: Impreza</p>
+      <p>Rok: 2020</p>
+      <p>Cena: $26000</p>
+      <p>Przebieg: 15000 km</p>
+      <p>Moc: 152 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/mazda_cx5.jpg"><div class="car-details">
+      <p>Marka: Mazda</p>
+      <p>Model: CX-5</p>
+      <p>Rok: 2019</p>
+      <p>Cena: $27000</p>
+      <p>Przebieg: 22000 km</p>
+      <p>Moc: 187 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/hyundai_elantra.jpg"><div class="car-details">
+      <p>Marka: Hyundai</p>
+      <p>Model: Elantra</p>
+      <p>Rok: 2020</p>
+      <p>Cena: $24000</p>
+      <p>Przebieg: 17000 km</p>
+      <p>Moc: 147 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/chevrolet_camaro.jpg"><div class="car-details">
+      <p>Marka: Chevrolet</p>
+      <p>Model: Camaro</p>
+      <p>Rok: 2018</p>
+      <p>Cena: $35000</p>
+      <p>Przebieg: 21000 km</p>
+      <p>Moc: 455 KM</p>
+    </div></div><div class="car"><img src="./Sklep samochodowy_files/lexus_rx.jpg"><div class="car-details">
+      <p>Marka: Lexus</p>
+      <p>Model: RX</p>
+      <p>Rok: 2019</p>
+      <p>Cena: $42000</p>
+      <p>Przebieg: 19000 km</p>
+      <p>Moc: 290 KM</p>
+    </div></div></div>
+
+  <form id="purchaseForm" style="display: block;"><div class="error-message"></div>
+    <div id="formHeader">
+      <h2>Formularz zakupu</h2>
+    </div>
+    <div>
+      <label>
+        <input type="radio" name="financing" value="leasing" required=""> Leasing
+      </label>
+      <label>
+        <input type="radio" name="financing" value="gotowka" required=""> Gotówka
+      </label>
+    </div>
+    <div>
+      <label for="name">Imię i nazwisko:</label>
+      <input type="text" id="name" name="name" pattern="[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+(\s[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+)+" required="">
+    </div>
+    <div>
+      <label for="deliveryDate">Data dostawy:</label>
+      <select id="deliveryDate" name="deliveryDate" required=""></select>
+    </div>
+    <div id="accessoriesContainer">
+        <label for="accessories">Wybierz akcesoria:</label>
+        <div class="accessories-list">
+        </div>
+      </div>
+    <div id="order-summary" style="display: none;">
+      <h2>Podsumowanie zamówienia</h2>
+      <div id="summary-content"></div>
+    </div>
+    <button type="submit">Zakup</button>
+    <button type="button" id="returnButton">Powrót do wyboru</button>
+    <div class="static-message">* Proszę uzupełnić pola wymagane</div>
+  </form>
+
+  <div id="confirmation" style="display: none;">
+    <p>Dziękujemy za zakup!</p>
+    <p>Metoda płatności: <span id="paymentMethod"></span></p>
+    <img id="carImage" src="http://127.0.0.1:5500/index.html" alt="Car Image">
+    <p id="totalPrice"></p>
+  </div>
+
+  <script src="./Sklep samochodowy_files/script.js.pobrane"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333; /* Tło nagłówka */
+  color: white; /* Kolor tekstu nagłówka */
+  padding: 10px 0; /* Wewnętrzny odstęp w nagłówku */
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+header h1 {
+  margin: 0; /* Usunięcie marginesu domyślnego */
+}
+
+#searchInput {
+  padding: 10px; /* Wewnętrzny odstęp w polu wyszukiwania */
+  width: 80%; /* Szerokość pola wyszukiwania */
+  margin: 20px auto; /* Margines górny i dolny oraz wyśrodkowanie */
+  display: block; /* Blokowe wyświetlanie elementu */
+}
+
+#car-list {
+  display: flex; /* Flexbox do układu listy samochodów */
+  flex-wrap: wrap; /* Zawijanie elementów w nowy wiersz */
+  justify-content: space-around; /* Rozłożenie elementów równomiernie */
+  padding: 20px; /* Wewnętrzny odstęp listy samochodów */
+}
+
+.car {
+  border: 1px solid #ddd; /* Obwódka samochodu */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień elementu */
+  margin: 20px; /* Margines wokół samochodu */
+  width: 250px; /* Szerokość elementu samochodu */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  cursor: pointer; /* Wskaźnik kursora */
+}
+
+.car img {
+  width: 100%; /* Szerokość obrazka dopasowana do rodzica */
+  height: auto; /* Automatyczna wysokość obrazka */
+  border-bottom: 1px solid #ddd; /* Dolna obwódka obrazka */
+}
+
+.car-details {
+  padding: 10px; /* Wewnętrzny odstęp szczegółów samochodu */
+}
+
+.static-message {
+  color: red; /* Kolor tekstu */
+  font-weight: bold; /* Pogrubienie tekstu */
+  margin-top: 10px; /* Margines górny */
+  font-size: 12px; /* Mniejszy rozmiar czcionki */
+}
+
+#purchaseForm {
+  border-top: 1px solid #ddd; /* Górna obwódka formularza */
+  padding: 20px; /* Wewnętrzny odstęp formularza */
+  margin: 20px; /* Margines wokół formularza */
+  background-color: #f9f9f9; /* Tło formularza */
+}
+
+#order-summary {
+  border-top: 1px solid rgb(138, 241, 138); /* Górna obwódka podsumowania */
+  padding-top: 20px; /* Wewnętrzny odstęp podsumowania */
+  margin-top: 20px; /* Margines górny podsumowania */
+}
+
+#returnButton, #clearAccessories, #addAccessory, #removeAccessory {
+  margin-top: 10px; /* Margines górny przycisków */
+}
+
+#confirmation {
+  text-align: center; /* Wyśrodkowanie tekstu */
+  padding: 20px; /* Wewnętrzny odstęp potwierdzenia */
+}
+
+
+
+
+
+
+#accessories-dropdown {
+  padding: 5px; /* Wewnętrzny odstęp */
+  margin: 20px; /* Margines wokół */
+}
+
+button {
+  padding: 5px 10px; /* Wewnętrzny odstęp przycisku */
+  background-color: #333; /* Tło przycisku */
+  color: white; /* Kolor tekstu przycisku */
+  border: none; /* Brak obwódki */
+  cursor: pointer; /* Wskaźnik kursora */
+}
+
+button:hover {
+  background-color: #555; /* Tło przycisku przy najechaniu */
+}

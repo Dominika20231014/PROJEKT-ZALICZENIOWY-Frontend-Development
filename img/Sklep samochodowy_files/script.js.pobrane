@@ -1,0 +1,379 @@
+// Lista dostępnych akcesoriów
+const accessories = [
+  { id: 1, name: "Dywaniki gumowe", price: 50 },
+  { id: 2, name: "System nawigacji GPS", price: 300 },
+  { id: 3, name: "Kamery cofania", price: 200 },
+  { id: 4, name: "Oświetlenie LED", price: 150 },
+  { id: 5, name: "Ładowarka domowa do samochodów elektrycznych", price: 500 },
+  { id: 6, name: "Fotele z podgrzewaniem i chłodzeniem", price: 700 },
+  { id: 7, name: "Sportowe koła 18\"", price: 800 },
+  { id: 8, name: "System audio premium", price: 600 },
+  { id: 9, name: "Dach panoramiczny", price: 1000 },
+  { id: 10, name: "Asystent parkowania", price: 400 },
+  { id: 11, name: "Wycieraczki przeciwdeszczowe", price: 80 },
+  { id: 12, name: "Przenośna lodówka samochodowa", price: 150 },
+  { id: 13, name: "Bagażnik dachowy", price: 250 },
+  { id: 14, name: "Osłony przeciwsłoneczne", price: 30 },
+  { id: 15, name: "System alarmowy", price: 300 },
+  { id: 16, name: "Bluetooth zestaw głośnomówiący", price: 100 },
+  { id: 17, name: "Siatka bagażowa", price: 40 },
+  { id: 18, name: "Osłona przeciwsłoneczna", price: 25 },
+  { id: 19, name: "Nakładki na pedały sportowe", price: 70 },
+  { id: 20, name: "Podgrzewane lusterka boczne", price: 150 },
+];
+
+const cars = [
+  {
+      brand: "Toyota",
+      model: "Corolla",
+      year: 2018,
+      price: 25000,
+      image: "img/toyota_corolla.jpg",
+      mileage: 40000,
+      horsepower: 132
+  },
+  {
+      brand: "Honda",
+      model: "Civic",
+      year: 2020,
+      price: 28000,
+      image: "img/honda_civic.jpg",
+      mileage: 20000,
+      horsepower: 158
+  },
+  {
+      brand: "Ford",
+      model: "Focus",
+      year: 2019,
+      price: 22000,
+      image: "img/ford_focus.jpg",
+      mileage: 35000,
+      horsepower: 123
+  },
+  {
+      brand: "Tesla",
+      model: "Model S",
+      year: 2021,
+      price: 70000,
+      image: "img/tesla_model_s.jpg",
+      mileage: 5000,
+      horsepower: 670
+  },
+  {
+      brand: "BMW",
+      model: "3 Series",
+      year: 2017,
+      price: 30000,
+      image: "img/bmw_3_series.jpg",
+      mileage: 25000,
+      horsepower: 248
+  },
+  {
+      brand: "Audi",
+      model: "A4",
+      year: 2019,
+      price: 35000,
+      image: "img/audi_a4.jpg",
+      mileage: 18000,
+      horsepower: 248
+  },
+  {
+      brand: "Mercedes-Benz",
+      model: "C-Class",
+      year: 2020,
+      price: 40000,
+      image: "img/mercedes_c_class.jpg",
+      mileage: 15000,
+      horsepower: 255
+  },
+  {
+      brand: "Volkswagen",
+      model: "Golf",
+      year: 2018,
+      price: 18000,
+      image: "img/vw_golf.jpg",
+      mileage: 30000,
+      horsepower: 147
+  },
+  {
+      brand: "Subaru",
+      model: "Impreza",
+      year: 2020,
+      price: 26000,
+      image: "img/subaru_impreza.jpg",
+      mileage: 15000,
+      horsepower: 152
+  },
+  {
+      brand: "Mazda",
+      model: "CX-5",
+      year: 2019,
+      price: 27000,
+      image: "img/mazda_cx5.jpg",
+      mileage: 22000,
+      horsepower: 187
+  },
+  {
+      brand: "Hyundai",
+      model: "Elantra",
+      year: 2020,
+      price: 24000,
+      image: "img/hyundai_elantra.jpg",
+      mileage: 17000,
+      horsepower: 147
+  },
+  {
+      brand: "Chevrolet",
+      model: "Camaro",
+      year: 2018,
+      price: 35000,
+      image: "img/chevrolet_camaro.jpg",
+      mileage: 21000,
+      horsepower: 455
+  },
+  {
+      brand: "Lexus",
+      model: "RX",
+      year: 2019,
+      price: 42000,
+      image: "img/lexus_rx.jpg",
+      mileage: 19000,
+      horsepower: 290
+  }
+];
+
+// Funkcja wyświetlająca samochody
+function displayCars(carsToDisplay) {
+  const carList = document.getElementById('car-list');
+  const header = document.getElementById('header'); // Pobranie elementu nagłówka
+  carList.innerHTML = ''; // Czyszczenie listy samochodów
+
+  carsToDisplay.forEach(car => {
+    const carDiv = document.createElement('div');
+    carDiv.classList.add('car');
+
+    const carImage = document.createElement('img');
+    carImage.src = car.image;
+    carDiv.appendChild(carImage);
+
+    const carDetails = document.createElement('div');
+    carDetails.classList.add('car-details');
+    carDetails.innerHTML = `
+      <p>Marka: ${car.brand}</p>
+      <p>Model: ${car.model}</p>
+      <p>Rok: ${car.year}</p>
+      <p>Cena: $${car.price}</p>
+      <p>Przebieg: ${car.mileage} km</p>
+      <p>Moc: ${car.horsepower} KM</p>
+    `;
+    carDiv.appendChild(carDetails);
+
+    carDiv.addEventListener("click", () => {
+      carList.style.display = "none";
+      header.style.display = "none"; // Ukrycie nagłówka
+      document.getElementById("purchaseForm").style.display = "block";
+      selectedCar = car;
+      selectedAccessories = [];
+      updateOrderSummary(selectedCar, selectedAccessories);
+    });
+
+    carList.appendChild(carDiv);
+  });
+}
+
+// Wywołanie funkcji wyświetlającej wszystkie samochody
+displayCars(cars);
+
+// Funkcja wyszukująca samochody po marce
+function searchCarsByBrand() {
+  const selectedOptions = Array.from(document.getElementById("brandSelect").selectedOptions);
+  const selectedBrands = selectedOptions.map(option => option.value);
+  
+  if (selectedBrands.includes('all')) {
+    displayCars(cars);
+  } else {
+    const filteredCars = cars.filter(car => selectedBrands.includes(car.brand));
+    displayCars(filteredCars);
+  }
+}
+
+// Wywołanie funkcji wyszukującej samochody po marce przy kliknięciu przycisku "Filtruj"
+document.getElementById("filterButton").addEventListener("click", searchCarsByBrand);
+
+// Deklaracja zmiennych przechowujących wybrany samochód i akcesoria
+let selectedCar;
+let selectedAccessories = [];
+
+// Kod obsługujący formularz
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("purchaseForm");
+  const confirmation = document.getElementById("confirmation");
+  const carList = document.getElementById("car-list");
+  const header = document.getElementById('header'); // Pobranie elementu nagłówka
+  const returnButton = document.getElementById("returnButton");
+  const errorMessageContainer = document.createElement("div");
+  errorMessageContainer.classList.add("error-message");
+  form.insertAdjacentElement('afterbegin', errorMessageContainer);
+
+  // Funkcja aktualizująca widok podsumowania zamówienia
+  function updateOrderSummary(car, accessories) {
+      const summaryContainer = document.getElementById("order-summary");
+
+      // Usunięcie istniejących dzieci kontenera podsumowania
+      while (summaryContainer.firstChild) {
+          summaryContainer.removeChild(summaryContainer.firstChild);
+      }
+
+      if (accessories.length > 0) {
+          const accessoriesList = document.createElement("ul");
+          accessoriesList.textContent = "Wybrane akcesoria:";
+          accessories.forEach(accessory => {
+              const item = document.createElement("li");
+              item.textContent = `${accessory.id}: ${accessory.name} - $${accessory.price}`;
+              accessoriesList.appendChild(item);
+          });
+          summaryContainer.appendChild(accessoriesList);
+
+          // Dodanie informacji o cenie całkowitej akcesoriów
+          const totalAccessoriesPrice = accessories.reduce((total, acc) => total + acc.price, 0);
+          const accessoriesPriceInfo = document.createElement("p");
+          accessoriesPriceInfo.textContent = `Cena akcesoriów: $${totalAccessoriesPrice}`;
+          summaryContainer.appendChild(accessoriesPriceInfo);
+      }
+
+      // Dodanie informacji o cenie całkowitej
+      const totalPrice = document.createElement("p");
+      const totalAccessoriesPrice = accessories.reduce((total, acc) => total + acc.price, 0);
+      const totalPriceWithAccessories = car.price + totalAccessoriesPrice;
+      totalPrice.textContent = `Cena całkowita: $${totalPriceWithAccessories}`;
+      summaryContainer.appendChild(totalPrice);
+
+      // Wyświetlenie podsumowania
+      summaryContainer.style.display = "block";
+  }
+
+  // Obsługa przycisku "Dodaj akcesorium"
+  document.getElementById("addAccessory").addEventListener("click", () => {
+      const accessoriesSelect = document.getElementById("accessories");
+      const selectedAccessoryIndex = accessoriesSelect.selectedIndex;
+      const selectedAccessory = accessories[selectedAccessoryIndex];
+
+      if (!selectedAccessory) {
+          const errorMessage = document.createElement("div");
+          errorMessage.textContent = "Proszę wybrać akcesorium.";
+          errorMessage.classList.add("error-message");
+          form.appendChild(errorMessage);
+          return; // Przerwanie funkcji w przypadku braku wybranego akcesorium
+      }
+
+      // Usunięcie ewentualnego wcześniejszego komunikatu o błędzie
+      const previousErrorMessage = form.querySelector(".error-message");
+      if (previousErrorMessage) {
+          form.removeChild(previousErrorMessage);
+      }
+
+      selectedAccessories.push(selectedAccessory);
+      updateOrderSummary(selectedCar, selectedAccessories);
+  });
+
+  // Obsługa przycisku "Usuń akcesorium"
+  document.getElementById("removeAccessory").addEventListener("click", () => {
+      const accessoriesSelect = document.getElementById("accessories");
+      const selectedAccessoryIndex = accessoriesSelect.selectedIndex;
+      const selectedAccessory = accessories[selectedAccessoryIndex];
+
+      if (!selectedAccessory) {
+          const errorMessage = document.createElement("div");
+          errorMessage.textContent = "Proszę wybrać akcesorium do usunięcia.";
+          errorMessage.classList.add("error-message");
+          form.appendChild(errorMessage);
+          return; // Przerwanie funkcji w przypadku braku wybranego akcesorium
+      }
+
+      // Usunięcie ewentualnego wcześniejszego komunikatu o błędzie
+      const previousErrorMessage = form.querySelector(".error-message");
+      if (previousErrorMessage) {
+          form.removeChild(previousErrorMessage);
+      }
+
+      const indexToRemove = selectedAccessories.findIndex(accessory => accessory.id === selectedAccessory.id);
+      selectedAccessories.splice(indexToRemove, 1);
+      updateOrderSummary(selectedCar, selectedAccessories);
+  });
+
+  // Obsługa przycisku "Powrót do wyboru"
+  returnButton.addEventListener("click", () => {
+      carList.style.display = "block";
+      carList.style.removeProperty("display"); // Usuwamy właściwość display, aby przywrócić domyślne stylowanie
+      form.style.display = "none";
+      header.style.display = "block"; // Przywrócenie nagłówka
+      confirmation.style.display = "none";
+  });
+
+  // Obsługa formularza
+  form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // Pobranie wartości wybranego finansowania
+      const selectedFinancing = form.financing.value;
+
+      // Pobranie wartości imienia i nazwiska
+      const fullName = document.getElementById("name").value.trim();
+
+      // Pobranie wartości daty dostawy
+      const selectedDeliveryDate = document.getElementById("deliveryDate").value;
+
+      // Walidacja formularza
+      if (selectedFinancing && fullName && selectedDeliveryDate) {
+          // Formularz jest poprawny, wyświetlenie potwierdzenia
+          confirmation.style.display = "block";
+          document.getElementById("paymentMethod").textContent = selectedFinancing;
+          document.getElementById("carImage").src = selectedCar.image;
+          const totalAccessoriesPrice = selectedAccessories.reduce((total, acc) => total + acc.price, 0);
+          const totalPriceWithAccessories = selectedCar.price + totalAccessoriesPrice;
+          document.getElementById("totalPrice").textContent = `Cena całkowita: $${totalPriceWithAccessories}`;
+          form.reset();
+          setTimeout(() => {
+              window.scrollTo(0, 0); // Przewiń stronę do góry
+              confirmation.style.display = "none";
+              carList.style.display = "flex"; // Ustawienie wyświetlania na flex
+              carList.style.flexWrap = "wrap"; // Dodanie zawijania flexboxa
+              form.style.display = "none";
+          }, 10000); // Ukryj potwierdzenie po 10 sekundach
+          errorMessageContainer.style.display = "none"; // Ukryj komunikat o błędzie po poprawnym wypełnieniu formularza
+      } else {
+          // Formularz jest niepoprawny, wyświetlenie komunikatu o błędzie
+          errorMessageContainer.textContent = "Błąd: Proszę uzupełnić pola wymagane";
+          errorMessageContainer.style.display = "block";
+      }
+  });
+
+  // Generowanie opcji dla daty dostawy
+  const deliveryDateSelect = document.getElementById("deliveryDate");
+  const today = new Date();
+
+  // Dodanie 14 dni do dzisiejszej daty
+  const deliveryStartDate = new Date(today);
+  deliveryStartDate.setDate(deliveryStartDate.getDate() + 14);
+
+  // Dodanie 3 miesięcy do daty początkowej
+  const deliveryEndDate = new Date(deliveryStartDate);
+  deliveryEndDate.setMonth(deliveryEndDate.getMonth() + 3);
+
+  // Sprawdzenie, czy startowa data jest niedzielą, jeśli tak, przesunięcie na poniedziałek
+  if (deliveryStartDate.getDay() === 0) {
+      deliveryStartDate.setDate(deliveryStartDate.getDate() + 1);
+  }
+
+  // Dodawanie opcji do listy dat, pomijając niedziele
+  let currentDate = new Date(deliveryStartDate);
+  while (currentDate <= deliveryEndDate) {
+      if (currentDate.getDay() !== 0) { // Pomijanie niedziel
+          const option = document.createElement("option");
+          option.value = currentDate.toISOString().split('T')[0];
+          option.textContent = currentDate.toLocaleDateString("pl-PL");
+          deliveryDateSelect.appendChild(option);
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+  }
+});
